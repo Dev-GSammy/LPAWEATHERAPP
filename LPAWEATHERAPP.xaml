@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LPAWEATHERAPP"
         mc:Ignorable="d"
-        Title="WEATHER APP" Height="800" Width="450">
+        Title="WEATHER APP" Height="700" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="107*"/>
