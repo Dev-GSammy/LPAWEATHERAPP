@@ -11,7 +11,7 @@
             <RowDefinition Height="580"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel>
+        <StackPanel Height="560" Margin="10">
             <Label 
                 Content="Search for City" 
                 HorizontalAlignment="Left" 
