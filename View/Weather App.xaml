@@ -30,12 +30,15 @@
                 Content="Search"
                 HorizontalAlignment="Stretch"
                 Margin="10,5"
-                Height="25"
+                Height="30"
                 Foreground="White"
                 Background="Blue"
-                FontSize="16"
+                FontSize="25"
                 FontFamily="Times New Roman"
-                
+                />
+            <ListView
+                Margin="10,15"
+                Height="440"
                 />
         </StackPanel>
     </Grid>
