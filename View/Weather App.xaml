@@ -41,5 +41,19 @@
                 Height="440"
                 />
         </StackPanel>
+        <TextBlock Grid.Row="1"
+                   Height="90"
+                   Margin="0"
+                   Background="Blue"
+                   />
+        <Label Content="City Name"
+               Grid.Row="1"
+               FontSize="20"
+               Margin="10,2"
+               FontFamily="Times New Roman"
+               Foreground="White"
+               HorizontalAlignment="Left"
+               />
+        <
     </Grid>
 </Window>
