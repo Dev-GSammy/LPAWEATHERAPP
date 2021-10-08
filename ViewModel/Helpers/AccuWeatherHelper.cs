@@ -31,7 +31,7 @@ namespace LPAWEATHERAPP.ViewModel.Helpers
             {
                 var response = await client.GetAsync(url);
                 string json = await response.Content.ReadAsStringAsync();
-
+                //the deserialize aspect is how we interpret the json file already received throught the API
                 cities = JsonConvert.DeserializeObject<List<City>>(json);
             }
 
@@ -41,7 +41,7 @@ namespace LPAWEATHERAPP.ViewModel.Helpers
         /// The method below returns the current conditions of each city in the returned list of the above cities.
         /// </summary>
         public static async Task<CurrentCondition> GetCurrentConditions(string citykey)
-        {
+        { 
             CurrentCondition currentcondition = new CurrentCondition();
             //seems like the get request line of code in a REST API are actually synonymous
             string url = BASE_URL + string.Format(CURRENT_CONDITIONS_ENDPOINT, citykey, API_KEY);

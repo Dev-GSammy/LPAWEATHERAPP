@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LPAWEATHERAPP
+namespace LPAWEATHERAPP.View
 {
     /// <summary>
-    /// Interaction logic for LPAWEATHERAPP.xaml
+    /// Interaction logic for Weather_App.xaml
     /// </summary>
-    public partial class LPAWEATHERAPP : Window
+    public partial class Weather_App : Window
     {
-        public LPAWEATHERAPP()
+        public Weather_App()
         {
             InitializeComponent();
-
         }
     }
 }

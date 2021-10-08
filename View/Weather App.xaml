@@ -1,0 +1,42 @@
+﻿<Window x:Class="LPAWEATHERAPP.View.Weather_App"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LPAWEATHERAPP.View"
+        mc:Ignorable="d"
+        Title="Weather_App" Height="700" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="580"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label 
+                Content="Search for City" 
+                HorizontalAlignment="Left" 
+                Margin="10, 5,10,0" 
+                FontSize="20"
+                Foreground="Blue"
+                FontStyle="Italic"
+                FontFamily="Times New Roman"
+                />
+            <TextBox
+                 HorizontalAlignment="Stretch"
+                Margin="15,5"
+                Height="30"
+                />
+            <Button
+                Content="Search"
+                HorizontalAlignment="Stretch"
+                Margin="10,5"
+                Height="25"
+                Foreground="White"
+                Background="Blue"
+                FontSize="16"
+                FontFamily="Times New Roman"
+                
+                />
+        </StackPanel>
+    </Grid>
+</Window>
