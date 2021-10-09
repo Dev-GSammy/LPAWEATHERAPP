@@ -11,15 +11,19 @@
         <vm:WeatherVM x:Key="vm"/>
     </Window.Resources>
     <Grid   DataContext="{StaticResource vm}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="580"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Height="560" Margin="10">
+        <StackPanel Margin="10" Grid.ColumnSpan="2">
             <Label 
                 Content="Search for City" 
                 HorizontalAlignment="Left" 
-                Margin="10, 5,10,0" 
+                Margin="10,5,10,0" 
                 FontSize="20"
                 Foreground="Blue"
                 FontStyle="Italic"
@@ -28,7 +32,10 @@
             <TextBox
                 Text="{Binding Query, Mode=TwoWay}"
                  HorizontalAlignment="Stretch"
-                Margin="15,5"
+                FontSize="18"
+                VerticalContentAlignment="Center"
+                FontFamily="Times New Roman"
+                Margin="10,5"
                 Height="30"
                 />
             <Button
@@ -41,8 +48,8 @@
                 FontSize="25"
                 FontFamily="Times New Roman"
                 />
-            
-            <ListView>
+
+            <ListView Margin="10,2">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -51,23 +58,22 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+
         </StackPanel>
-        
+
         <TextBlock Grid.Row="1"
-                   Height="90"
-                   Margin="0"
-                   Background="Blue"
+                   Margin="0,0,0,-1"
+                   Background="Blue" Grid.ColumnSpan="2"
                    />
-        <TextBlock Text="{Binding Query, Mode=TwoWay}"
+        <TextBlock Text="{Binding Query}"
                Grid.Row="1"
                FontSize="35"
-               Margin="15,0,0,30"
+               Margin="15,6,0,40"
                FontFamily="Times New Roman"
                Foreground="White"
                HorizontalAlignment="Left"
-               VerticalAlignment="Center"
-               />
+               VerticalAlignment="Stretch"
+         />
         <TextBlock Text="0C"
                Grid.Row="1"
                HorizontalAlignment="Right"
@@ -77,14 +83,14 @@
                Padding="2,20"
                Width="70"
                Height="90"
-               FontSize="50"
-            />
+               FontSize="50" Grid.Column="1" Margin="0,0,0,-1"
+         />
         <TextBlock Text="overcast"
                    Grid.Row="1"
                    FontFamily="Times New Roman"
                    FontSize="20"
                    Foreground="White"
-                   Margin="15,55,0,0"
+                   Margin="15,50,0,10" Grid.ColumnSpan="2"
          />
     </Grid>
 </Window>
