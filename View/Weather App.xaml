@@ -59,24 +59,32 @@
                    Margin="0"
                    Background="Blue"
                    />
-        <Label Content="City Name"
-               
-               Width="120"
+        <TextBlock Text="{Binding Query, Mode=TwoWay}"
                Grid.Row="1"
-               FontSize="20"
-               Margin="10,2"
+               FontSize="35"
+               Margin="15,0,0,30"
                FontFamily="Times New Roman"
                Foreground="White"
                HorizontalAlignment="Left"
+               VerticalAlignment="Center"
                />
-        <Label Content="0 C"
+        <TextBlock Text="0C"
                Grid.Row="1"
                HorizontalAlignment="Right"
+               VerticalAlignment="Center"
                FontFamily="Times New Roman"
                Foreground="White"
+               Padding="2,20"
                Width="70"
-               FontSize="40"
-               VerticalContentAlignment="Stretch" Margin="0,0,0,2" RenderTransformOrigin="0.521,0.71"
+               Height="90"
+               FontSize="50"
             />
+        <TextBlock Text="overcast"
+                   Grid.Row="1"
+                   FontFamily="Times New Roman"
+                   FontSize="20"
+                   Foreground="White"
+                   Margin="15,55,0,0"
+         />
     </Grid>
 </Window>
