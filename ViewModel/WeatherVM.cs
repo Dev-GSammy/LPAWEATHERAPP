@@ -21,12 +21,15 @@ namespace LPAWEATHERAPP.ViewModel
                 OnPropertyChanged("Query");
             }
         }
-        private CurrentCondition CurrentCondition;
-
-        public CurrentCondition CurrentConditions
+        private CurrentCondition currentCondition;
+        public CurrentCondition CurrentCondition
         {
-            get { return CurrentCondition; }
-            set { CurrentCondition = value; }
+            get { return currentCondition; }
+            set 
+            { 
+                currentCondition = value;
+                OnPropertyChanged("CurrentCondition");
+            }
         }
 
 
