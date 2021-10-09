@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LPAWEATHERAPP.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -20,6 +21,14 @@ namespace LPAWEATHERAPP.ViewModel
                 OnPropertyChanged("Query");
             }
         }
+        private CurrentCondition CurrentCondition;
+
+        public CurrentCondition CurrentConditions
+        {
+            get { return CurrentCondition; }
+            set { CurrentCondition = value; }
+        }
+
 
 
 
