@@ -26,6 +26,7 @@
                 FontFamily="Times New Roman"
                 />
             <TextBox
+                Text="{Binding Query, Mode=TwoWay}"
                  HorizontalAlignment="Stretch"
                 Margin="15,5"
                 Height="30"
