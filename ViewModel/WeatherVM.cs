@@ -32,7 +32,17 @@ namespace LPAWEATHERAPP.ViewModel
             }
         }
 
+        private City SelectedCity;
 
+        public City selectedCity
+        {
+            get { return selectedCity; }
+            set
+            {
+                selectedCity = value;
+                OnPropertyChanged("SelectedCity");
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

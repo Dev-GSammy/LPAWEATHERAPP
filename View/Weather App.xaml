@@ -65,18 +65,18 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="0,5">
-                <TextBlock Text="Forecast"
+                <TextBlock Text="{Binding }"
                            Foreground="White"
                            FontSize="30"
                            Margin="10,5"/>
-                <TextBlock Text="overcast"
+                <TextBlock Text="{Binding WeatherText}"
                            Foreground="White"
                            FontSize="18"
                            Margin="10,0"/>
             </StackPanel>
             <TextBlock Grid.Column="1"
                        VerticalAlignment="Center"
-                       Text="11C"
+                       Text="{Binding Temperature.Metric.Value, StringFormat={}{0}{C}}"
                        Foreground="White"
                        FontSize="40"
                        Margin="20,0" />
