@@ -1,4 +1,5 @@
 ﻿using LPAWEATHERAPP.Model;
+using LPAWEATHERAPP.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,6 @@ namespace LPAWEATHERAPP.ViewModel
     public class WeatherVM : INotifyPropertyChanged
     {
         private string query;
-
         public string Query
         {
             get { return query; }
@@ -62,7 +62,7 @@ namespace LPAWEATHERAPP.ViewModel
                     }
                 };
             }
-        }
+        }  
 
 
         public event PropertyChangedEventHandler PropertyChanged;
