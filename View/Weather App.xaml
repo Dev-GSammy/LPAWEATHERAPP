@@ -11,13 +11,9 @@
         <vm:WeatherVM x:Key="vm"/>
     </Window.Resources>
     <Grid   DataContext="{StaticResource vm}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="61*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="580"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <StackPanel Margin="10" Grid.ColumnSpan="2">
             <Label 
@@ -58,39 +54,32 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackPanel>
 
-        <TextBlock Grid.Row="1"
-                   Margin="0,0,0,-1"
-                   Background="Blue" Grid.ColumnSpan="2"
-                   />
-        <TextBlock Text="{Binding Query}"
-               Grid.Row="1"
-               FontSize="35"
-               Margin="15,6,0,40"
-               FontFamily="Times New Roman"
-               Foreground="White"
-               HorizontalAlignment="Left"
-               VerticalAlignment="Stretch"
-         />
-        <TextBlock Text="0C"
-               Grid.Row="1"
-               HorizontalAlignment="Right"
-               VerticalAlignment="Center"
-               FontFamily="Times New Roman"
-               Foreground="White"
-               Padding="2,20"
-               Width="70"
-               Height="90"
-               FontSize="50" Grid.Column="1" Margin="0,0,0,-1"
-         />
-        <TextBlock Text="overcast"
-                   Grid.Row="1"
-                   FontFamily="Times New Roman"
-                   FontSize="20"
-                   Foreground="White"
-                   Margin="15,50,0,10" Grid.ColumnSpan="2"
-         />
+        <Grid Grid.Row="1"
+           Background="blue"
+           Height="90"
+           DataContext="{Binding CurrentCondition}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="0,5">
+                <TextBlock Text="Forecast"
+                           Foreground="White"
+                           FontSize="30"
+                           Margin="10,5"/>
+                <TextBlock Text="overcast"
+                           Foreground="White"
+                           FontSize="18"
+                           Margin="10,0"/>
+            </StackPanel>
+            <TextBlock Grid.Column="1"
+                       VerticalAlignment="Center"
+                       Text="11C"
+                       Foreground="White"
+                       FontSize="40"
+                       Margin="20,0" />
+        </Grid>
     </Grid>
 </Window>
