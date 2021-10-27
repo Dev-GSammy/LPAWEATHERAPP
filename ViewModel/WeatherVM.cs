@@ -43,6 +43,27 @@ namespace LPAWEATHERAPP.ViewModel
                 OnPropertyChanged("SelectedCity");
             }
         }
+        public WeatherVM()
+        {
+            if (DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject()))
+            {
+                selectedCity = new City
+                {
+                    LocalizedName = "New York"
+                };
+                currentCondition = new CurrentCondition
+                {
+                    WeatherText = "Partly Cloudy",
+                    Temperature = new Temperature
+                    {
+                        Metric = new Units
+                        {
+                            Value = 21
+                        }
+                    }
+                };
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

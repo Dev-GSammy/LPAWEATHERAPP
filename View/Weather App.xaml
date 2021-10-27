@@ -65,7 +65,8 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="0,5">
-                <TextBlock Text="{Binding }"
+                <TextBlock DataContext="{StaticResource vm}"
+                           Text="{Binding selectedCity.LocalizedName}"
                            Foreground="White"
                            FontSize="30"
                            Margin="10,5"/>
