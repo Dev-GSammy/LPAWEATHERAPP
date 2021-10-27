@@ -15,7 +15,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <StackPanel Margin="10" Grid.ColumnSpan="2">
+        <StackPanel Margin="10">
             <Label 
                 Content="Search for City" 
                 HorizontalAlignment="Left" 
@@ -75,7 +75,7 @@
                            FontSize="18"
                            Margin="10,0"/>
             </StackPanel>
-            <TextBlock Grid.Row="1" Grid.Column="1"
+            <TextBlock Grid.Column="1"
                        VerticalAlignment="Center"
                        Text="{Binding Temperature.Metric.Value, StringFormat={}{0} C}"
                        Foreground="White"
