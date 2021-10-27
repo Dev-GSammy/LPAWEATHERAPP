@@ -22,7 +22,7 @@
                 Margin="10,5,10,0" 
                 FontSize="20"
                 Foreground="Blue"
-                FontStyle="Italic"
+                FontStyle="Italic" 
                 FontFamily="Times New Roman"
                 />
             <TextBox
@@ -66,7 +66,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel Margin="0,5">
                 <TextBlock DataContext="{StaticResource vm}"
-                           Text="{Binding selectedCity.LocalizedName}"
+                           Text="{Binding SelectedCity.LocalizedName}"
                            Foreground="White"
                            FontSize="30"
                            Margin="10,5"/>
@@ -77,7 +77,7 @@
             </StackPanel>
             <TextBlock Grid.Column="1"
                        VerticalAlignment="Center"
-                       Text="{Binding Temperature.Metric.Value, StringFormat={}{0}{C}}"
+                       Text="{Binding Temperature.Metric.Value, StringFormat={}{0} C}"
                        Foreground="White"
                        FontSize="40"
                        Margin="20,0" />

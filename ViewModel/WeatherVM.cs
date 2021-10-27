@@ -32,9 +32,8 @@ namespace LPAWEATHERAPP.ViewModel
             }
         }
 
-        private City SelectedCity;
-
-        public City selectedCity
+        private City selectedCity;
+        public City SelectedCity
         {
             get { return selectedCity; }
             set
@@ -47,11 +46,11 @@ namespace LPAWEATHERAPP.ViewModel
         {
             if (DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject()))
             {
-                selectedCity = new City
+                SelectedCity = new City
                 {
                     LocalizedName = "New York"
                 };
-                currentCondition = new CurrentCondition
+                CurrentCondition = new CurrentCondition
                 {
                     WeatherText = "Partly Cloudy",
                     Temperature = new Temperature
